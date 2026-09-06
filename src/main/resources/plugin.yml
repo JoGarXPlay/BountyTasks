@@ -1,0 +1,20 @@
+name: BountyTasks
+description: $description
+version: '${version}'
+
+main: me.jogarx.bountyTasks.BountyTasks
+api-version: '26.2'
+
+authors: [ JoGarX ]
+
+commands:
+  bountytasks:
+    description: Open the BountyTasks menu
+    usage: /bountytasks
+    aliases:
+      - bt
+
+permissions:
+  bountytasks.reload:
+    description: Reload BountyTasks configuration
+    default: op

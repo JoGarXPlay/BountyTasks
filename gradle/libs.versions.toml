@@ -1,0 +1,8 @@
+[versions]
+spigot-api = "26.2-R0.1-SNAPSHOT"
+
+
+[libraries]
+spigot-api = { module = "org.spigotmc:spigot-api", version.ref = "spigot-api" }
+
+[plugins]

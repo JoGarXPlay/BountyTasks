@@ -1,0 +1,833 @@
+# ============================================================
+# BountyTasks - Task Configuration
+# ============================================================
+#
+# Puedes agregar, modificar o eliminar tareas libremente.
+#
+# Cada tarea debe tener:
+#
+#   id:
+#     name: "Nombre de la tarea"
+#     material: MATERIAL
+#     requirements:
+#       - type: ITEM
+#         material: MATERIAL_REQUERIDO
+#         amount: CANTIDAD
+#     rewards:
+#       - type: ITEM
+#         material: MATERIAL_RECOMPENSA
+#         amount: CANTIDAD
+#
+# ------------------------------------------------------------
+# id
+# ------------------------------------------------------------
+# Identificador único de la tarea.
+# No debe repetirse entre tareas.
+# Se recomienda utilizar un nombre descriptivo y sin espacios.
+#
+# ------------------------------------------------------------
+# name
+# ------------------------------------------------------------
+# Nombre que se mostrará al jugador.
+#
+# ------------------------------------------------------------
+# material
+# ------------------------------------------------------------
+# Material que se mostrará como icono de la tarea en el menú.
+# Debe ser un Material válido de Minecraft.
+#
+# ------------------------------------------------------------
+# requirements
+# ------------------------------------------------------------
+# Objetos que el jugador debe entregar para completar la tarea.
+#
+# type: ITEM
+# Indica que el requisito es un objeto.
+#
+# material:
+# Material requerido.
+#
+# amount:
+# Cantidad requerida.
+#
+# ------------------------------------------------------------
+# rewards
+# ------------------------------------------------------------
+# Objetos que el jugador recibirá al completar la tarea.
+#
+# type: ITEM
+# Indica que la recompensa es un objeto.
+#
+# material:
+# Material que recibirá el jugador.
+#
+# amount:
+# Cantidad de objetos que recibirá.
+#
+# ============================================================
+# EJEMPLO
+# ============================================================
+#
+# Puedes copiar este bloque para crear una nueva tarea.
+# Recuerda cambiar el id, nombre, materiales y cantidades.
+#
+# smooth_stone:
+#   name: "Constructor experto"
+#   material: BOOK
+#   requirements:
+#     - type: ITEM
+#       material: SMOOTH_STONE
+#       amount: 64
+#   rewards:
+#     - type: ITEM
+#       material: DIAMOND_SWORD
+#       amount: 1
+#
+# ============================================================
+# TAREAS
+# ============================================================
+tasks:
+
+  smooth_stone:
+    name: "Constructor experto"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: SMOOTH_STONE
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: DIAMOND_SWORD
+        amount: 1
+
+  cobblestone:
+    name: "El trabajo pesado"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: COBBLESTONE
+        amount: 128
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 15
+
+  stone:
+    name: "Cantero"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: STONE
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: GOLDEN_APPLE
+        amount: 2
+
+  glass:
+    name: "Maestro del vidrio"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GLASS
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 10
+
+  bricks:
+    name: "El constructor"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: BRICKS
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: IRON_CHESTPLATE
+        amount: 1
+
+  terracotta:
+    name: "Trabajo de arcilla"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: TERRACOTTA
+        amount: 35
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 8
+
+  wool:
+    name: "Maestro de la lana"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: WHITE_WOOL
+        amount: 45
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 6
+
+  leather:
+    name: "Curtidor"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: LEATHER
+        amount: 32
+    rewards:
+      - type: ITEM
+        material: IRON_CHESTPLATE
+        amount: 1
+
+  cooked_beef:
+    name: "Proveedor"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: COOKED_BEEF
+        amount: 32
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 8
+
+  bread:
+    name: "Panadero"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: BREAD
+        amount: 48
+    rewards:
+      - type: ITEM
+        material: GOLDEN_APPLE
+        amount: 2
+
+  pumpkin:
+    name: "Cosecha de calabazas"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: PUMPKIN
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: EMERALD
+        amount: 24
+
+  sugar_cane:
+    name: "Gran cosecha"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: SUGAR_CANE
+        amount: 128
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 12
+
+  paper:
+    name: "Fabricante de papel"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: PAPER
+        amount: 128
+    rewards:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 24
+
+  obsidian:
+    name: "El resistente"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: OBSIDIAN
+        amount: 10
+    rewards:
+      - type: ITEM
+        material: DIAMOND_PICKAXE
+        amount: 1
+
+  quartz:
+    name: "Minería del Nether"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: QUARTZ
+        amount: 32
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 12
+
+  blaze_rod:
+    name: "Fuego del Nether"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: BLAZE_ROD
+        amount: 10
+    rewards:
+      - type: ITEM
+        material: DIAMOND_SWORD
+        amount: 1
+
+  ender_pearl:
+    name: "Buscador de portales"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: ENDER_PEARL
+        amount: 16
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 25
+
+  ghast_tear:
+    name: "Lágrimas del Nether"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GHAST_TEAR
+        amount: 4
+    rewards:
+      - type: ITEM
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+
+  slime_ball:
+    name: "Cazador de slimes"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: SLIME_BALL
+        amount: 32
+    rewards:
+      - type: ITEM
+        material: GOLDEN_APPLE
+        amount: 8
+
+  honey_bottle:
+    name: "Apicultor"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: HONEY_BOTTLE
+        amount: 16
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 10
+
+  redstone:
+    name: "Ingeniero"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: REDSTONE
+        amount: 128
+    rewards:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 32
+
+  lapis:
+    name: "Especialista en lapislázuli"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: LAPIS_LAZULI
+        amount: 128
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 16
+
+  coal:
+    name: "Gran extracción"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: COAL
+        amount: 128
+    rewards:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 40
+
+  gold:
+    name: "Cargamento de oro"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 48
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 12
+
+  diamond:
+    name: "El proveedor"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 16
+    rewards:
+      - type: ITEM
+        material: GOLDEN_APPLE
+        amount: 8
+
+  rotten_flesh:
+    name: "Cazador incansable"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: ROTTEN_FLESH
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 10
+
+  bone:
+    name: "Coleccionista de huesos"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: BONE
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 8
+
+  gunpowder:
+    name: "Experto en explosivos"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GUNPOWDER
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 12
+
+  arrow:
+    name: "Arsenal"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: ARROW
+        amount: 128
+    rewards:
+      - type: ITEM
+        material: DIAMOND
+        amount: 12
+
+  fish:
+    name: "Gran pesca"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: COD
+        amount: 64
+    rewards:
+      - type: ITEM
+        material: GOLDEN_APPLE
+        amount: 8
+
+  crimson_fungus:
+    name: "Cultivador del Nether"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 10
+    rewards:
+      - type: ITEM
+        material: CRIMSON_FUNGUS
+        amount: 16
+
+  warped_fungus:
+    name: "Botánico del Nether"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 10
+    rewards:
+      - type: ITEM
+        material: WARPED_FUNGUS
+        amount: 16
+
+  crimson_nylium:
+    name: "Tierra carmesí"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 12
+    rewards:
+      - type: ITEM
+        material: CRIMSON_NYLIUM
+        amount: 32
+
+  terracotta_construction:
+    name: "Maestro de la cerámica"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 20
+    rewards:
+      - type: ITEM
+        material: TERRACOTTA
+        amount: 64
+
+  white_concrete:
+    name: "Constructor moderno"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 24
+    rewards:
+      - type: ITEM
+        material: WHITE_CONCRETE
+        amount: 64
+
+  red_concrete:
+    name: "Arquitectura roja"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 20
+    rewards:
+      - type: ITEM
+        material: RED_CONCRETE
+        amount: 64
+
+  black_concrete:
+    name: "Construcción oscura"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 20
+    rewards:
+      - type: ITEM
+        material: BLACK_CONCRETE
+        amount: 64
+
+  blue_concrete:
+    name: "Arquitectura azul"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: EMERALD
+        amount: 18
+    rewards:
+      - type: ITEM
+        material: BLUE_CONCRETE
+        amount: 64
+
+  glass_construction:
+    name: "Cristalería fina"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 16
+    rewards:
+      - type: ITEM
+        material: GLASS
+        amount: 64
+
+  tinted_glass:
+    name: "Vidrio misterioso"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 8
+    rewards:
+      - type: ITEM
+        material: TINTED_GLASS
+        amount: 32
+
+  sea_lantern:
+    name: "Iluminación marina"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 10
+    rewards:
+      - type: ITEM
+        material: SEA_LANTERN
+        amount: 15
+
+  prismarine:
+    name: "Piedra del océano"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 18
+    rewards:
+      - type: ITEM
+        material: PRISMARINE
+        amount: 64
+
+  prismarine_bricks:
+    name: "Arquitecto marino"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 8
+    rewards:
+      - type: ITEM
+        material: PRISMARINE_BRICKS
+        amount: 48
+
+  dark_prismarine:
+    name: "Construcción abisal"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 12
+    rewards:
+      - type: ITEM
+        material: DARK_PRISMARINE
+        amount: 48
+
+  lantern:
+    name: "Iluminación urbana"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 15
+    rewards:
+      - type: ITEM
+        material: LANTERN
+        amount: 32
+
+  soul_lantern:
+    name: "Luz de las almas"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 20
+    rewards:
+      - type: ITEM
+        material: SOUL_LANTERN
+        amount: 24
+
+  chain:
+    name: "Herrero decorativo"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 24
+    rewards:
+      - type: ITEM
+        material: IRON_CHAIN
+        amount: 32
+
+  candle:
+    name: "Fabricante de velas"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: EMERALD
+        amount: 10
+    rewards:
+      - type: ITEM
+        material: CANDLE
+        amount: 32
+
+  amethyst_block:
+    name: "Cristal arquitectónico"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 8
+    rewards:
+      - type: ITEM
+        material: AMETHYST_BLOCK
+        amount: 32
+
+  quartz_block:
+    name: "Mármol del Nether"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 20
+    rewards:
+      - type: ITEM
+        material: QUARTZ_BLOCK
+        amount: 32
+
+  polished_blackstone:
+    name: "Arquitectura oscura"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 24
+    rewards:
+      - type: ITEM
+        material: POLISHED_BLACKSTONE
+        amount: 64
+
+  polished_blackstone_bricks:
+    name: "Fortaleza oscura"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 10
+    rewards:
+      - type: ITEM
+        material: POLISHED_BLACKSTONE_BRICKS
+        amount: 48
+
+  crying_obsidian:
+    name: "Piedra de los portales"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: DIAMOND
+        amount: 12
+    rewards:
+      - type: ITEM
+        material: CRYING_OBSIDIAN
+        amount: 24
+
+  moss_block:
+    name: "Jardinería natural"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: EMERALD
+        amount: 12
+    rewards:
+      - type: ITEM
+        material: MOSS_BLOCK
+        amount: 64
+
+  moss_carpet:
+    name: "Decoración natural"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: EMERALD
+        amount: 8
+    rewards:
+      - type: ITEM
+        material: MOSS_CARPET
+        amount: 64
+
+  glow_berries:
+    name: "Jardín luminoso"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 12
+    rewards:
+      - type: ITEM
+        material: GLOW_BERRIES
+        amount: 32
+
+  campfire:
+    name: "Fogata del aventurero"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 12
+    rewards:
+      - type: ITEM
+        material: CAMPFIRE
+        amount: 16
+
+  soul_campfire:
+    name: "Fogata de almas"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 15
+    rewards:
+      - type: ITEM
+        material: SOUL_CAMPFIRE
+        amount: 12
+
+  flower_pot:
+    name: "Decorador de jardines"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: EMERALD
+        amount: 8
+    rewards:
+      - type: ITEM
+        material: FLOWER_POT
+        amount: 24
+
+  scaffolding:
+    name: "Maestro constructor"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: IRON_INGOT
+        amount: 16
+    rewards:
+      - type: ITEM
+        material: SCAFFOLDING
+        amount: 32
+
+  lightning_rod:
+    name: "Protección contra tormentas"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 12
+    rewards:
+      - type: ITEM
+        material: LIGHTNING_ROD
+        amount: 16
+
+  hanging_lantern:
+    name: "Iluminación colgante"
+    material: BOOK
+    requirements:
+      - type: ITEM
+        material: GOLD_INGOT
+        amount: 18
+    rewards:
+      - type: ITEM
+        material: LANTERN
+        amount: 48
