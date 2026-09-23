@@ -8,43 +8,55 @@ All rights reserved.
 
 BountyTasks is free to use.
 
-Any person may use the official BountyTasks plugin on personal, private, public, community, or commercial Minecraft servers without paying a license fee or usage fee.
+Anyone may use BountyTasks on personal, private, public, community, or commercial Minecraft servers without paying any license fee or usage fee.
 
-Use of BountyTasks is not restricted by server rank, player rank, donations, or other purchases.
+The use of BountyTasks is not restricted by server rank, player rank, donations, purchases, or any other form of server monetization.
 
-2. Official Distribution
+2. Redistribution
 
-BountyTasks must be obtained from official websites, repositories, or other distribution sources officially authorized by the copyright holder.
+BountyTasks may be shared or redistributed for the purpose of allowing others to obtain and use the plugin, provided that:
 
-3. Modification
+- BountyTasks remains available free of charge.
+- The original copyright and authorship notices are preserved.
+- The plugin is not presented as the work of another person or organization.
 
-The BountyTasks plugin may not be modified, altered, patched, or otherwise changed.
+Redistribution must not imply that the person redistributing BountyTasks is the original author or creator of the plugin.
 
-Modified versions of BountyTasks may not be distributed or made available to the public.
+3. Sale and Commercial Distribution
 
-4. Sale and Payment
-
-BountyTasks may not be sold or offered in exchange for money.
+BountyTasks may not be sold.
 
 No person may charge money specifically for:
 
-* BountyTasks itself.
-* Access to BountyTasks.
-* Permission to use BountyTasks.
-* A license to use BountyTasks.
-* The BountyTasks source code.
+- BountyTasks itself.
+- Access to BountyTasks.
+- A license to use BountyTasks.
+- Permission to use BountyTasks.
+- The BountyTasks source code.
+
+BountyTasks may, however, be freely used on commercial Minecraft servers, including servers that generate revenue through donations, ranks, purchases, subscriptions, or other monetization systems.
+
+4. Modification
+
+BountyTasks may be modified for personal or private use.
+
+Modified versions may not be sold or distributed in a way that presents the modified work as an original plugin created by another person.
+
+The original BountyTasks copyright and authorship must not be removed or falsely replaced with the name or authorship of another person.
 
 5. Source Code
 
-The BountyTasks source code may not be sold or redistributed as a separate product.
+The BountyTasks source code remains the intellectual property of the copyright holder.
 
-The source code may not be used to create and distribute a modified version of BountyTasks.
+The source code may not be sold or presented as the original work of another person.
 
-6. Ownership
+Nothing in this license transfers ownership of the BountyTasks source code or its original work.
 
-BountyTasks and its original source code remain the intellectual property of the copyright holder.
+6. Ownership and Attribution
 
-No person may claim BountyTasks or its original work as their own.
+BountyTasks and its original source code remain the intellectual property of the copyright holder, JoGarXPlay.
+
+No person may claim BountyTasks, its original source code, or its original work as their own.
 
 7. Reservation of Rights
 
@@ -55,3 +67,4 @@ All rights not expressly granted by this license are reserved by the copyright h
 BountyTasks is provided "AS IS", without warranty of any kind.
 
 The copyright holder is not responsible for any damage, data loss, server issues, compatibility problems, or other consequences resulting from the use of BountyTasks.
+
