@@ -1,6 +1,8 @@
+
 package me.jogarx.bountyTasks.bounty;
 
 import me.jogarx.bountyTasks.BountyTasks;
+import me.jogarx.bountyTasks.language.LanguageManager;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
@@ -10,8 +12,10 @@ import org.bukkit.persistence.PersistentDataType;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BountyBook {
+
     private final BountyTasks plugin;
     private final NamespacedKey bountyIdKey;
 
@@ -22,8 +26,9 @@ public class BountyBook {
 
     public ItemStack create(Bounty bounty) {
 
-        ItemStack item = new ItemStack(Material.BOOK);
+        LanguageManager language = plugin.getLanguageManager();
 
+        ItemStack item = new ItemStack(Material.BOOK);
         ItemMeta meta = item.getItemMeta();
 
         if (meta == null) {
@@ -38,45 +43,78 @@ public class BountyBook {
                 bounty.getId()
         );
 
-        List<String> lore = new ArrayList<>();
-
-        lore.add("§7Requisitos:");
-
-        for (BountyRequirement requirement : bounty.getRequirements()) {
-
-            lore.add(
-                    "§f- " +
-                            requirement.getAmount() +
-                            "x " +
-                            formatMaterial(requirement.getMaterial())
-            );
-        }
-
-        lore.add("");
-
-        lore.add("§7Recompensas:");
-
-        for (BountyReward reward : bounty.getRewards()) {
-
-            lore.add(
-                    "§a+ " +
-                            reward.getAmount() +
-                            "x " +
-                            formatMaterial(reward.getMaterial())
-            );
-        }
-
-        meta.setLore(lore);
+        meta.setLore(createLore(bounty, language));
 
         item.setItemMeta(meta);
 
         return item;
     }
 
+    private List<String> createLore(
+            Bounty bounty,
+            LanguageManager language
+    ) {
+
+        List<String> lore = new ArrayList<>();
+
+        lore.add(language.get("task.requirements"));
+
+        for (BountyRequirement requirement : bounty.getRequirements()) {
+
+            lore.add(
+                    language.get(
+                            "task.requirement_line",
+                            Map.of(
+                                    "amount",
+                                    String.valueOf(requirement.getAmount()),
+                                    "material",
+                                    getMaterialName(
+                                            requirement.getMaterial(),
+                                            language
+                                    )
+                            )
+                    )
+            );
+        }
+
+        lore.add("");
+
+        lore.add(language.get("task.rewards"));
+
+        for (BountyReward reward : bounty.getRewards()) {
+
+            lore.add(
+                    language.get(
+                            "task.reward_line",
+                            Map.of(
+                                    "amount",
+                                    String.valueOf(reward.getAmount()),
+                                    "material",
+                                    getMaterialName(
+                                            reward.getMaterial(),
+                                            language
+                                    )
+                            )
+                    )
+            );
+        }
+
+        return lore;
+    }
+
+    private String getMaterialName(
+            Material material,
+            LanguageManager language
+    ) {
+
+        return language.get(
+                "materials." + material.name().toLowerCase()
+        );
+    }
+
     public void give(Player player, Bounty bounty) {
 
         ItemStack book = create(bounty);
-
         player.getInventory().addItem(book);
     }
 
@@ -126,33 +164,5 @@ public class BountyBook {
         }
 
         return false;
-    }
-
-    private String formatMaterial(Material material) {
-
-        String name = material.name()
-                .toLowerCase()
-                .replace("_", " ");
-
-        String[] words = name.split(" ");
-
-        StringBuilder result = new StringBuilder();
-
-        for (String word : words) {
-
-            if (result.length() > 0) {
-                result.append(" ");
-            }
-
-            result.append(
-                    Character.toUpperCase(word.charAt(0))
-            );
-
-            result.append(
-                    word.substring(1)
-            );
-        }
-
-        return result.toString();
     }
 }
